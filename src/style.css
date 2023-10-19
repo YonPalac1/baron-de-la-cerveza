@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+	/* Colores */
+	--white: #E1EFE6;
+	--orange: #F09D45;
+	--darkorange: #B57129;
+	--violet: #5343DC;
+
+	/* Fuentes */
+	--font-rowdies: 'Rowdies', cursive;
+	--font-open: 'Open Sans', sans-serif;
+}
+.swiper-slide {
+	width: 360px;
+}
+@media (max-width: 640px) {
+    .swiper-slide {
+		width: 150px;
+	}
+  }
