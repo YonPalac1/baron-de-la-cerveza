@@ -32,7 +32,7 @@ export const Search = ({isActiveScroll}) => {
         name="keywords"
         onChange={handleInputChange}
         value={keywords}
-        placeholder="Buscar por nombre"
+        placeholder="Buscar por tipo, ej: lagger"
       />
       <Button type="submit" isActiveScroll={isActiveScroll} >
         <FaSearch  />

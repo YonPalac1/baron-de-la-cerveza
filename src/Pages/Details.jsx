@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 import { FaTruckMoving } from "react-icons/fa";
 
-import image from "../Assets/products/1638375272775_img_.jpg";
 import { addToCart } from "../Actions/actions";
 
 export const Details = () => {
@@ -19,7 +18,7 @@ export const Details = () => {
       <ContainerMax>
         <ContainerImage>
           <Discount>{select.discount} %</Discount>
-          <Image src={image} />
+          <Image src={select.image} />
         </ContainerImage>
         <ContainerInfo>
           <Name>{select.name}</Name>
@@ -85,7 +84,9 @@ const ContainerInfo = styled.div`
   display: flex;
   flex-direction: column;
 `;
-const Image = styled.img``;
+const Image = styled.img`
+  height: 200px;
+`;
 const Name = styled.h3`
   font-size: 30px;
   color: var(--orange);

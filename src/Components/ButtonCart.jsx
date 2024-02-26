@@ -15,12 +15,11 @@ export const ButtonCart = () => {
   return (
     <Container>
       <ContainerBox isActive={isActive}>
-        <p>Carrito</p>
         {cart.length
           ? cart.map((data, i) => (
               <Product key={i}>
                 <div>
-                  <Image src={image} />
+                  <Image src={data.image} />
                 </div>
                 <InformationProduct>
                   <p>{data.name}</p> 
@@ -68,7 +67,9 @@ const ContainerButton = styled.button`
 const ContainerBox = styled.div`
   top: 150px;
   right: 0;
+
   background: black;
+  min-width: 200px;
   min-height: 150px;
   max-height: 500px;
   flex-direction: column;
@@ -89,6 +90,7 @@ const Product = styled.div`
   font-family: var(--font-open);
   border-bottom: 1px dotted var(--darkorange);
   display: flex;
+  justify-content: space-around;
 `;
 const InformationProduct = styled.div`
   display: flex;
@@ -96,7 +98,7 @@ const InformationProduct = styled.div`
   margin-left: 12px;
 `
 const Image = styled.img`
-  width: 100px;
+  width: 50px;
 `
 const ContainerGoToCart = styled.button`
   border: none;

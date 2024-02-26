@@ -18,7 +18,7 @@ export const Cart = () => {
             cart.map((item, i) => (
               <DetailsProducts key={i}>
                 <div>
-                  <img src={image}></img>
+                  <ImageDetail src={item.image}/>
                 </div>
                 <ContainerDetails>
                   <Name>{item.name}</Name>
@@ -32,7 +32,7 @@ export const Cart = () => {
             }
         </ContainerAllInfo>
         <ContainerTotal>
-          <h3>Total</h3>
+          <TotalTitle>Total</TotalTitle>
           <TotalPrice>$ {total}</TotalPrice>
         </ContainerTotal>
       </ContainerMax>
@@ -59,6 +59,9 @@ const Title = styled.h3`
 const DetailsProducts = styled.div`
   display: flex;
 `;
+const ImageDetail = styled.img`
+  height: 200px;
+`
 const ContainerAllInfo = styled.div`
   display: flex;
   flex-direction: column;
@@ -84,6 +87,12 @@ const ContainerTotal = styled.div`
   font-family: var(--font-open);
   flex-direction: column;
 `;
+const TotalTitle = styled.h3`
+  position: sticky;
+  top: 120px;
+`;
 const TotalPrice = styled.div`
   color: var(--darkorange);
+  position: sticky;
+  top: 180px;
 `;

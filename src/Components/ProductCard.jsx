@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { addToCart, selectProduct } from "../Actions/actions";
 
-import image from "../Assets/products/1638375272775_img_.jpg";
 import { Link } from "react-router-dom";
 
 export const ProductCard = ({card}) => {
@@ -13,7 +12,7 @@ export const ProductCard = ({card}) => {
   const {cart} = useSelector(store => store.data)
 
   const addItemToCart = (card) => {
-      dispatch(addToCart(newItem))
+      dispatch(addToCart(card))
   }
   const selectItem = (card) => {
     dispatch(selectProduct(card))
@@ -25,7 +24,7 @@ export const ProductCard = ({card}) => {
       <Span>{card.discount === "0.00" ? "" : `${card.discount}% Off`}</Span>
       <Link to="/products/details">
         <ContainerImages onClick={() => selectItem(card)}>
-          <Images src={image} />
+          <Images src={card.image} />
         </ContainerImages>
       </Link>
       <IconCart onClick={() => addItemToCart(card)}>
@@ -37,7 +36,7 @@ export const ProductCard = ({card}) => {
         <Brand>{card.brand} / {card.alcohol_content}%alc</Brand>
       </ContainerInformation>
       <ContainerButton>
-        <Button>comprar</Button>
+        <Button onClick={() => addItemToCart(card)}>comprar</Button>
       </ContainerButton>
     </Container>
   );
@@ -71,8 +70,12 @@ const ContainerImages = styled.div`
   position: relative;
   border-bottom: 1px solid #ccc;
   overflow: hidden;
-`;
-const Images = styled.img`
+  display: flex;
+  
+  `;
+  const Images = styled.img`
+    height: 200px;
+    margin: auto;
     transition: all 0.3s ease-in-out;
     &:hover {
         transform: scale(1.3);
