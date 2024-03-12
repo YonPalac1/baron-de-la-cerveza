@@ -172,9 +172,16 @@ const ProductsList = styled.div`
   gap: 30px;
   padding: 0 20px;
   transition: 1s;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   @media (max-width: 954px) {
     padding: 10px 10px;
     gap: 20px;
+  }
+  @media (max-width: 520px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
   }
   @media (max-width: 767px) {
     width: 100%;
