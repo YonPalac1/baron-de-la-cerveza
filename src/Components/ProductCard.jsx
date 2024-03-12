@@ -52,6 +52,7 @@ const Container = styled.div`
   overflow: hidden;
   padding-bottom: 10px;
   height: 350px;
+  min-width: 200px;
   transition: 1s;
 `;
 const Span = styled.span`
