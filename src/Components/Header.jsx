@@ -1,13 +1,13 @@
 import React from 'react'
 import styled from 'styled-components';
-
+import 'animate.css';
 import imageHeader from '../Assets/icons/header-3.jpg'
 
 export const Header = () => {
   return (
     <BackgroundImage>
-        <TitleHeader>Pedi tu birra y te la llevamos a tu casa</TitleHeader>
-        <SubtitleHeader>El barón de la cerveza</SubtitleHeader>
+        <TitleHeader className="animate__animated animate__backInDown">Pedi tu birra y te la llevamos a tu casa</TitleHeader>
+        <SubtitleHeader className="animate__animated animate__fadeIn">El barón de la cerveza</SubtitleHeader>
     </BackgroundImage>
   )
 }

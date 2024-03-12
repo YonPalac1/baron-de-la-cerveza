@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import 'animate.css';
 
 import cervezas from "../Assets/banners/img3.png";
 
@@ -11,7 +12,7 @@ export const BrandsBanner = () => {
         <ContainerImage>
           <Image src={cervezas} />
         </ContainerImage>
-        <ContainerInfo>
+        <ContainerInfo className="animate__animated animate__fadeIn">
           <Title>
             ¡Brindamos por más de 10.000 pedidos entregados y seguimos sumando!
           </Title>

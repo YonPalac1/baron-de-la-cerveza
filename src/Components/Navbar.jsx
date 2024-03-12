@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import 'animate.css';
 import logo from "../Assets/icons/icon-title2.png";
 import { FaSearch, FaShoppingCart, FaTimes } from "react-icons/fa";
 import { Search } from "./Search";
@@ -27,7 +28,7 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <Nav isActiveScroll={isActiveScroll}>
+    <Nav isActiveScroll={isActiveScroll} className="animate__animated animate__fadeIn">
       <Logo src={logo} />
 
       <DesktopNav>

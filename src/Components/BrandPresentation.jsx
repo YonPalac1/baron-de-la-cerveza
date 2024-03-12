@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import styled from 'styled-components'
+import 'animate.css';
 
 export const BrandPresentation = () => {
   return (
     <Container>
-        <ContainerCenter>
+        <ContainerCenter className="animate__animated animate__fadeIn">
             <Title>Dejá que el escabio llegue a vos</Title>
             <Span>Buscá entre miles de productos mundialmente reconocidos y otros que no tanto. Elegí tus favoritos, seleccioná la forma de entrega y tocá el botón mágico de comprar</Span>
             <Link to="/products"><Button>Ver todos los productos</Button></Link>

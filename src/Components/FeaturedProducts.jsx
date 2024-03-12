@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
+import 'animate.css';
 import { Pagination, Scrollbar, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { ProductCard } from "./ProductCard";
@@ -62,7 +63,7 @@ export const FeaturedProducts = () => {
   const data = useSelector((store) => store.data.array);
 
   return (
-    <Container>
+    <Container className="animate__animated animate__fadeIn">
       <ContainerMax>
         <Title>Destacados</Title>
         <Slider cards={data} />
