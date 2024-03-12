@@ -1,5 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { FaShoppingCart } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -13,6 +15,7 @@ export const ProductCard = ({card}) => {
 
   const addItemToCart = (card) => {
       dispatch(addToCart(card))
+      toast.success(`${card.name} agregado al carrito`);
   }
   const selectItem = (card) => {
     dispatch(selectProduct(card))
@@ -48,15 +51,8 @@ const Container = styled.div`
   position: relative;
   overflow: hidden;
   padding-bottom: 10px;
-  width: 220px;
   height: 350px;
   transition: 1s;
-  @media (max-width: 890px) {
-    width: 200px;
-  }
-  @media (max-width: 442px) {
-    width: 180px;
-  }
 `;
 const Span = styled.span`
   background-color: var(--orange);

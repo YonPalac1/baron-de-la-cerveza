@@ -18,14 +18,32 @@ const Slider = ({ cards }) => {
       autoplay
       spaceBetween={0}
       pagination={{ clickable: true }}
+      slidesPerView={4}
       breakpoints={{
-        640: {
-          width: 640,
+        300: {
           slidesPerView: 2,
+          spaceBetween: 10,
+        },
+
+        382: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        400: {
+          slidesPerView: 2,
+          spaceBetween: 15,
+        },
+        640: {
+          slidesPerView: 3,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 4,
+          spaceBetween: 40,
         },
         1024: {
-          width: 1024,
           slidesPerView: 4,
+          spaceBetween: 50,
         },
       }}
     >
@@ -54,21 +72,25 @@ export const FeaturedProducts = () => {
 };
 
 const Container = styled.div`
-  padding: 20px 0;
+  padding: 20px 20px;
   display: flex;
   justify-content: center;
 `;
 const ContainerMax = styled.div`
   width: 1024px;
   max-width: 1024px;
+  padding: 20px;
   @media (max-width: 978px) {
     width: 100%;
+    padding: 20px;
   }
   @media (max-width: 767px) {
     width: 100%;
+    padding: 20px;
   }
   @media (max-width: 640px) {
     width: 100%;
+    padding: 20px;
   }
 `;
 const Title = styled.h3`

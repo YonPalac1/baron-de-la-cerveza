@@ -38,7 +38,6 @@ export const getAllCategories = () => async (dispatch) => {
 
 export const addToCart = (data) => async (dispatch) => {
   try {
-    console.log(data)
     dispatch({ type: CART, payload: data });
   } catch (e) {
     console.log("error", e);

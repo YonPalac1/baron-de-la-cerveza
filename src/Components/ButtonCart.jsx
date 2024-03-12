@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import styled from "styled-components";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import { DeleteFromCart } from "./DeleteFromCart";
-import image from '../Assets/products/1638375272775_img_.jpg'
-import { DELETE } from "../Constants";
 import { Link } from "react-router-dom";
 
 export const ButtonCart = () => {
@@ -13,30 +13,43 @@ export const ButtonCart = () => {
   const [isActive, setIsActive] = useState(false);
 
   return (
-    <Container>
-      <ContainerBox isActive={isActive}>
-        {cart.length
-          ? cart.map((data, i) => (
+    <>
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
+      <Container>
+        <Count>{cart.length}</Count>
+        <ContainerBox isActive={isActive}>
+          {cart.length
+            ? cart.map((data, i) => (
               <Product key={i}>
                 <div>
                   <Image src={data.image} />
                 </div>
                 <InformationProduct>
-                  <p>{data.name}</p> 
+                  <p>{data.name}</p>
                   <p>${data.price}</p>
                   <DeleteFromCart data={data} />
                 </InformationProduct>
               </Product>
             ))
-          : <Product>el carrito está vacio</Product>}
+            : <Product>el carrito está vacio</Product>}
           <ContainerGoToCart>
             <Link to="/shopping_cart">Ir al carrito</Link>
           </ContainerGoToCart>
-      </ContainerBox>
-      <ContainerButton onClick={() => setIsActive(!isActive)}>
-        <FaShoppingCart />
-      </ContainerButton>
-    </Container>
+        </ContainerBox>
+        <ContainerButton onClick={() => setIsActive(!isActive)}>
+          <FaShoppingCart />
+        </ContainerButton>
+      </Container>
+    </>
   );
 };
 const Container = styled.div`
@@ -48,6 +61,20 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: right;
 `;
+const Count = styled.div`
+  position: absolute;
+  background: red;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  right: 30px;
+  bottom: 5px;
+  z-index: 5;
+`
 const ContainerButton = styled.button`
   background: var(--orange);
   width: 50px;
