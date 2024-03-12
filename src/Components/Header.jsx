@@ -16,7 +16,7 @@ const BackgroundImage = styled.div`
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 57vh;
+    height: 35vh;
     display: flex;
     justify-content: center;
     align-items: center;
