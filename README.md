@@ -1,9 +1,9 @@
 <h2>El baron de la cerveza</h2>
 <a href="https://baron-de-la-cerveza.vercel.app/">Visitar pagina</a>
-<br>
+<br><br>
 Este proyecto web está desarrollado con React y presenta las siguientes funcionalidades:
-
-Características:
+<br><br>
+<h4>Características:</h4>
 
 <p><b>Carrito de compras:</b> Permite a los usuarios agregar, eliminar y gestionar productos en un carrito de compras virtual.</p>
     <p><b>Sección de productos:</b>  Muestra una lista de productos disponibles para la venta, con la posibilidad de filtrar y ordenar según diferentes criterios.</p>
