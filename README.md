@@ -5,7 +5,7 @@ Este proyecto web está desarrollado con React y presenta las siguientes funcion
 <br><br>
 <h4>Características:</h4>
 
-    <p><b>Carrito de compras:</b> Permite a los usuarios agregar, eliminar y gestionar productos en un carrito de compras virtual.</p>
+<p><b>Carrito de compras:</b> Permite a los usuarios agregar, eliminar y gestionar productos en un carrito de compras virtual.</p>
     <p><b>Sección de productos:</b>  Muestra una lista de productos disponibles para la venta, con la posibilidad de filtrar y ordenar según diferentes criterios.</p>
     <p><b>Búsqueda indexada:</b>  Implementa una función de búsqueda que permite a los usuarios encontrar productos de forma rápida y eficiente.</p>
     <p><b>Sliders:</b>  Incorpora sliders interactivos para mostrar imágenes o información destacada de manera atractiva.</p>
